@@ -23,7 +23,7 @@ def LCS(X, Y):
         else:
             j -= 1
     print(' '.join(str(i) for i in lcs))
-    
+
 def main():
     n, m = map(int, input().strip().split())
     A = list(map(int, input().strip().split()))
