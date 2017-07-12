@@ -1,0 +1,5 @@
+n = int(input())
+powers = list(map(int, input().strip().split()))
+even = sorted([i for i in powers if not i & 1])
+odd = sorted([i for i in powers if i & 1])
+print(' '.join(str(i) for i in even), sum(even), ' '.join(str(i) for i in odd), sum(odd))
