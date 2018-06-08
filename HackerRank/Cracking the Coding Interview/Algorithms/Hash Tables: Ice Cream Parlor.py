@@ -3,11 +3,8 @@ for _ in range(int(input())):
     flavors_costs = list(map(int, input().strip().split()))
 
     flavors = {}
-    for i in range(len(flavors_costs)):
-        if flavors_costs[i] in flavors:
-            flavors[flavors_costs[i]] += [i + 1]
-        else:
-            flavors[flavors_costs[i]] = [i + 1]
+    for i, cost in enumerate(flavors_costs):
+        flavors[cost] = flavors.get(cost, []) + [i + 1]
 
     for cost in flavors_costs:
         if dollars - cost in flavors:
